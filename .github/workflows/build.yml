@@ -62,7 +62,7 @@ jobs:
         run: cd build && zip -r wordpress.zip .
 
       - name: Upload the build directory as GitHub artifact
-        uses: actions/upload-artifact@0b7f8abb1508181956e8e162db84b466c27e18ce # v3.1.2
+        uses: actions/upload-artifact@1eb3cb2b3e0f29609092a73eb033bb759a334595 # v4.1.0
         if: always()
         with:
             name: wordpress-build-${{ github.event_name == 'pull_request' && github.event.number || github.sha }}
